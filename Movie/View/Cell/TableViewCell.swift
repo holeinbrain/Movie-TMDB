@@ -15,7 +15,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
+  @IBOutlet weak var originalLable: UILabel!
+  @IBOutlet weak var yearLabel: UILabel!
 
     @IBOutlet weak var ratingLabel: UILabel!
     
@@ -52,12 +53,25 @@ class TableViewCell: UITableViewCell {
         ratingLabel.textAlignment = .center
     }
     
-    func configure(from model: ViewModel) {
+    func configure(from model: Movie) {
         titleLabel.text = model.title
-        coverImageView.image = model.coverImage
-        ratingLabel.text = model.rate
-        yearLabel.text = model.title
+      originalLable.text = model.originalTitle
+        yearLabel.text = model.year
+      ratingLabel.text = String(model.rate)
+      let image = model.posterImage
+        
+        var imageUrlString = "https://image.tmdb.org/t/p/w300" + image
+        
+        imageUrlString = imageUrlString.replacingOccurrences(of: " ", with: "%20")
+        if let url = URL(string: imageUrlString) {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                      self.coverImageView.image = UIImage(data: data)
+                    }
+                }
+            }.resume()
+        }
     }
-
 }
 

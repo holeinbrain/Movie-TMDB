@@ -28,13 +28,13 @@ struct MovieData {
         "Ivanol",
         "Juh D"
     ]
-    func getData() -> [ViewModel] {
-        var data = [ViewModel]()
-        for index in 1 ... 8 {
-          data.append(ViewModel(title: titles[index - 1], rate: "5.1", coverImage: UIImage(named: "book\(index)")))
-        }
-        return data
-    }
+//    func getData() -> [ViewModel] {
+//        var data = [ViewModel]()
+//        for index in 1 ... 8 {
+//          data.append(ViewModel(title: titles[index - 1], rate: "5.1", coverImage: UIImage(named: "book\(index)")))
+//        }
+//        return data
+//    }
     
 
 }

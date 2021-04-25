@@ -7,19 +7,31 @@
 
 import Foundation
 
-import UIKit
 struct Movie {
+  var originalTitle: String
+  var title: String
+  var year: String
+  var rate: Double
+  var adult:Bool
+  var posterImage: String
+  var overview: String
+  
+  init?(json: JSON){
+    guard let originalTitle = json["original_title"] as? String,
+          let title = json["title"] as? String,
+          let year = json["release_date"] as? String,
+          let rate = json["vote_average"] as? Double,
+          let adult = json["adult"] as? Bool,
+          let posterImage = json["poster_path"] as? String,
+          let overview = json["overview"] as? String
+    else { return nil}
     
-    let title: String?
-    let year: String?
-    let rate: Double?
-    let posterImage: String?
-    let overview: String?
-    init(title: String, year: String, rate: Double, posterImage: String, overview: String) {
-        self.title = title
-        self.year = year
-        self.rate = rate
-        self.posterImage = posterImage
-        self.overview = overview
-    }
+    self.originalTitle = originalTitle
+    self.title = title
+    self.year = year
+    self.rate = rate
+    self.adult = adult
+    self.posterImage = posterImage
+    self.overview = overview
+  }
 }
