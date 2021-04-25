@@ -24,7 +24,7 @@ class NetworkingClient {
         let getMovieResponse = try GetMovieResponse(json: json)
         successBlock(getMovieResponse)
       } catch {
-        
+        print(error)
       }
     }
   }

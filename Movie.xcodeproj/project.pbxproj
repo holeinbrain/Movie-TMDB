@@ -18,14 +18,12 @@
 		2C98B452261DFD5C00EC1E79 /* MovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B451261DFD5C00EC1E79 /* MovieUITests.swift */; };
 		2C98B476261E002400EC1E79 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B475261E002400EC1E79 /* MainViewController.swift */; };
 		2C98B47C261E014E00EC1E79 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B47B261E014E00EC1E79 /* TableViewCell.swift */; };
-		2C98B489261E021800EC1E79 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B488261E021800EC1E79 /* ViewModel.swift */; };
 		2C98B4A1261E037B00EC1E79 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4A0261E037B00EC1E79 /* Extention.swift */; };
 		2C98B4AB261E048400EC1E79 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4AA261E048400EC1E79 /* GradientView.swift */; };
 		2C98B4B3261E04D800EC1E79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4B2261E04D800EC1E79 /* Constants.swift */; };
 		2C98B4B8261E057E00EC1E79 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4B7261E057E00EC1E79 /* DetailsViewController.swift */; };
 		2C98B4C0261E05AB00EC1E79 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4BF261E05AB00EC1E79 /* DetailsView.swift */; };
 		2C98B4C6261E060700EC1E79 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4C5261E060700EC1E79 /* DismissButton.swift */; };
-		2C98B4CF261E067100EC1E79 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4CE261E067100EC1E79 /* MovieData.swift */; };
 		2C98B4D7261E069500EC1E79 /* SelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4D6261E069500EC1E79 /* SelectedViewModel.swift */; };
 		2C98B4DD261E06F000EC1E79 /* ViewPresentingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98B4DC261E06F000EC1E79 /* ViewPresentingAnimator.swift */; };
 		2C98B4E7261E0B4900EC1E79 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C98B49E261E031200EC1E79 /* Montserrat-Bold.ttf */; };
@@ -76,7 +74,6 @@
 		2C98B453261DFD5C00EC1E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C98B475261E002400EC1E79 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2C98B47B261E014E00EC1E79 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		2C98B488261E021800EC1E79 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		2C98B49C261E031200EC1E79 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		2C98B49D261E031200EC1E79 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		2C98B49E261E031200EC1E79 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -86,7 +83,6 @@
 		2C98B4B7261E057E00EC1E79 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		2C98B4BF261E05AB00EC1E79 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		2C98B4C5261E060700EC1E79 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
-		2C98B4CE261E067100EC1E79 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 		2C98B4D6261E069500EC1E79 /* SelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewModel.swift; sourceTree = "<group>"; };
 		2C98B4DC261E06F000EC1E79 /* ViewPresentingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentingAnimator.swift; sourceTree = "<group>"; };
 		2CAC86132625A2F0000375F7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -212,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				2C98B4CD261E064D00EC1E79 /* Data Model */,
-				2C98B488261E021800EC1E79 /* ViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				2CAC86132625A2F0000375F7 /* Movie.swift */,
-				2C98B4CE261E067100EC1E79 /* MovieData.swift */,
 				2C98B4D6261E069500EC1E79 /* SelectedViewModel.swift */,
 			);
 			path = "Data Model";
@@ -598,14 +592,12 @@
 				2CB6262B2635A65F006FD3E0 /* NetworkingError.swift in Sources */,
 				2C98B42D261DFD5B00EC1E79 /* AppDelegate.swift in Sources */,
 				2C98B4B8261E057E00EC1E79 /* DetailsViewController.swift in Sources */,
-				2C98B4CF261E067100EC1E79 /* MovieData.swift in Sources */,
 				2C98B437261DFD5B00EC1E79 /* Movie.xcdatamodeld in Sources */,
 				2C98B4C0261E05AB00EC1E79 /* DetailsView.swift in Sources */,
 				2C98B4D7261E069500EC1E79 /* SelectedViewModel.swift in Sources */,
 				2C98B42F261DFD5B00EC1E79 /* SceneDelegate.swift in Sources */,
 				2C98B4B3261E04D800EC1E79 /* Constants.swift in Sources */,
 				2C98B4DD261E06F000EC1E79 /* ViewPresentingAnimator.swift in Sources */,
-				2C98B489261E021800EC1E79 /* ViewModel.swift in Sources */,
 				2CAC86142625A2F0000375F7 /* Movie.swift in Sources */,
 				2C98B476261E002400EC1E79 /* MainViewController.swift in Sources */,
 				2C98B4AB261E048400EC1E79 /* GradientView.swift in Sources */,

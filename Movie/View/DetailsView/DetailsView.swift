@@ -50,7 +50,7 @@ class DetailsView: UIView {
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
-  let authorLabel: UILabel = {
+  let originalTitleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
     label.textColor = UIColor.AppColors.black.withAlphaComponent(0.5)
@@ -130,17 +130,17 @@ class DetailsView: UIView {
                         * 8).isActive = true
     NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: imageContainerView, attribute: .trailing, multiplier: 1.0, constant: -Constants.regularSpace
                         * 8).isActive = true
-    NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .width, multiplier: 1.28, constant: 0).isActive = true
+    NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .width, multiplier: 1.4, constant: 0).isActive = true
     
     addSubview(bottomContainerView)
-    NSLayoutConstraint(item: bottomContainerView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.55, constant: 0).isActive = true
+    NSLayoutConstraint(item: bottomContainerView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.50, constant: 0).isActive = true
     NSLayoutConstraint(item: bottomContainerView, attribute: .top, relatedBy: .equal, toItem: imageContainerView, attribute: .bottom, multiplier: 1.0, constant: -200).isActive = true
     NSLayoutConstraint(item: bottomContainerView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     NSLayoutConstraint(item: bottomContainerView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
     NSLayoutConstraint(item: bottomContainerView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
     
     bottomContainerView.addSubview(actionButtonsContainerView)
-    NSLayoutConstraint(item: actionButtonsContainerView, attribute: .top, relatedBy: .equal, toItem: bottomContainerView, attribute: .top, multiplier: 1.0, constant: Constants.regularSpace * 3).isActive = true
+    NSLayoutConstraint(item: actionButtonsContainerView, attribute: .top, relatedBy: .equal, toItem: bottomContainerView, attribute: .top, multiplier: 1.0, constant: Constants.regularSpace).isActive = true
     NSLayoutConstraint(item: actionButtonsContainerView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 44).isActive = true
     NSLayoutConstraint(item: actionButtonsContainerView, attribute: .leading, relatedBy: .equal, toItem: bottomContainerView, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
     NSLayoutConstraint(item: actionButtonsContainerView, attribute: .trailing, relatedBy: .equal, toItem: bottomContainerView, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
@@ -152,16 +152,16 @@ class DetailsView: UIView {
     NSLayoutConstraint(item: addToFavoritesButton, attribute: .width, relatedBy: .equal, toItem: addToFavoritesButton, attribute: .height, multiplier: 1.0, constant: 0).isActive = true
     
     bottomContainerView.addSubview(titleLabel)
-    NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: actionButtonsContainerView, attribute: .bottom, multiplier: 1.0, constant: Constants.regularSpace * 4).isActive = true
+    NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: actionButtonsContainerView, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: bottomContainerView, attribute: .leading, multiplier: 1.0, constant: Constants.regularSpace * 4).isActive = true
     NSLayoutConstraint(item: titleLabel, attribute: .trailing, relatedBy: .equal, toItem: bottomContainerView, attribute: .trailing, multiplier: 1.0, constant: -Constants.regularSpace * 4).isActive = true
     
-    bottomContainerView.addSubview(authorLabel)
-    NSLayoutConstraint(item: authorLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: Constants.regularSpace).isActive = true
-    NSLayoutConstraint(item: authorLabel, attribute: .centerX, relatedBy: .equal, toItem: bottomContainerView, attribute: .centerX, multiplier: 1.0, constant: 0).isActive = true
+    bottomContainerView.addSubview(originalTitleLabel)
+    NSLayoutConstraint(item: originalTitleLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: Constants.regularSpace).isActive = true
+    NSLayoutConstraint(item: originalTitleLabel, attribute: .centerX, relatedBy: .equal, toItem: bottomContainerView, attribute: .centerX, multiplier: 1.0, constant: 0).isActive = true
     
     bottomContainerView.addSubview(textView)
-    NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: authorLabel, attribute: .bottom, multiplier: 1.0, constant: Constants.regularSpace * 3).isActive = true
+    NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: originalTitleLabel, attribute: .bottom, multiplier: 1.0, constant: Constants.regularSpace * 3).isActive = true
     NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: bottomContainerView, attribute: .leading, multiplier: 1.0, constant: Constants.regularSpace * 3).isActive = true
     NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: bottomContainerView, attribute: .trailing, multiplier: 1.0, constant: -Constants.regularSpace * 3).isActive = true
     NSLayoutConstraint(item: textView, attribute: .bottom, relatedBy: .equal, toItem: bottomContainerView, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
@@ -170,7 +170,7 @@ class DetailsView: UIView {
     NSLayoutConstraint(item: bottomGradientView, attribute: .bottom, relatedBy: .equal, toItem: bottomContainerView, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     NSLayoutConstraint(item: bottomGradientView, attribute: .leading, relatedBy: .equal, toItem: bottomContainerView, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
     NSLayoutConstraint(item: bottomGradientView, attribute: .trailing, relatedBy: .equal, toItem: bottomContainerView, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-    NSLayoutConstraint(item: bottomGradientView, attribute: .height, relatedBy: .equal, toItem: bottomContainerView, attribute: .height, multiplier: 0.3, constant: 0).isActive = true
+    NSLayoutConstraint(item: bottomGradientView, attribute: .height, relatedBy: .equal, toItem: bottomContainerView, attribute: .height, multiplier: 0.1, constant: 0).isActive = true
     
     addSubview(dismissButton)
     NSLayoutConstraint(item: dismissButton, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: Constants.regularSpace * 8).isActive = true
