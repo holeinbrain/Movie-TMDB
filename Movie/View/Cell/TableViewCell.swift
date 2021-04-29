@@ -29,7 +29,7 @@ class TableViewCell: UITableViewCell {
     backgroundColor = .clear
     selectionStyle = .none
     
-    containerView.backgroundColor = .white
+    containerView.backgroundColor = UIColor(white: 1, alpha: 0.5)
     containerView.layer.cornerRadius = 12
     
     coverImageView.contentMode = .scaleAspectFill

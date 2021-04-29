@@ -22,17 +22,12 @@ class MainViewController: UIViewController {
   var category = "top_rated"
   var page = 2
   var isNewDataLoading = false
+  
   //MARK:- View Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     setupTable()
     loadData()
-    
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    tableView.reloadData()
   }
   
   //MARK:- internal methods
@@ -41,7 +36,8 @@ class MainViewController: UIViewController {
     let urlString = "https://api.themoviedb.org/3/movie/\(category)?api_key=\(key)&language=ru-US&page=\(page)&"
     guard let url = URL(string: urlString)else {return}
     NetworkingClient.shared.getData(url) { response in
-      self.data = response.movie
+      let dataResponse = response.movie
+      self.data.append(contentsOf: dataResponse)
       self.tableView.reloadData()
     }
   }
@@ -79,15 +75,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    
     tableView.addLoading(indexPath) {
-      // add your code here
       if indexPath.row == self.data.count - 1 {
         self.page += 1
         self.loadData()
       }
-      // append Your array and reload your tableview
-      tableView.stopLoading() // stop your indicator
+      tableView.stopLoading()
     }
   }
   

@@ -15,7 +15,15 @@ struct Movie {
   var adult:Bool
   var posterImage: String
   var overview: String
-  
+//  init(originalTitle: String, title: String, year: String, rate: Double,adult: Bool, posterImage: String, overview: String) {
+//     self.originalTitle = originalTitle
+//      self.title = title
+//      self.year = year
+//      self.rate = rate
+//     self.adult = adult
+//      self.posterImage = posterImage
+//      self.overview = overview
+//
   init?(json: JSON){
     guard let originalTitle = json["original_title"] as? String,
           let title = json["title"] as? String,
